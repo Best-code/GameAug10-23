@@ -27,7 +27,7 @@ Engine::~Engine(){
 
 bool Engine::init(){
     
-    window = SDL_CreateWindow("r/gamedev", 100, 100, 630, 630, SDL_WINDOW_SHOWN);
+    window = SDL_CreateWindow("r/gamedev", 100, 100, 630, 750, SDL_WINDOW_SHOWN);
     if(window == nullptr) {
         std::cout << "SDL_CreateWindow Error: " << SDL_GetError() << std::endl;
         
