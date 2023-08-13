@@ -8,9 +8,13 @@
 #include "PacmanGame.hpp"
 #include <iostream>
 #include "characters.hpp"
+#include "displayText.hpp"
 
 Map* map = new Map();
 Character* player = new Character();
+
+TextShower* score = new TextShower();
+TextShower* highScore = new TextShower();
 // Ghost* blue = new Ghost(1);
 // Ghost* red = new Ghost(1);
 
@@ -18,6 +22,8 @@ bool PacmanGame::init(){
     Engine::init();
     map->init(*renderer);
     player->init(*renderer);
+    score->init(*renderer, {255,255,255}, *font, "Score: 0", 0, 650, 300, 100);
+    highScore->init(*renderer, {255,255,255}, *font, "High Score: 69", 330, 650, 300, 100);
     return running;
 }
 
@@ -27,6 +33,8 @@ void PacmanGame::draw(){
    
     map->draw();
     player->draw();
+    score->draw();
+    highScore->draw();
 }
 
 void PacmanGame::render(){
@@ -40,8 +48,8 @@ void PacmanGame::render(){
 
 void PacmanGame::update(){
     Engine::update();
-    player->move();
-    player->makeChange();
+    player->update();
+    score->changeText("Score: " + std::to_string(player->scoreValue));
 }
 
 void PacmanGame::handleEvent(SDL_Event& event){

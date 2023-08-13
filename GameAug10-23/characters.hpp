@@ -18,6 +18,8 @@ const int playerSpeed = 1;
 class Character{
 public:
     virtual void init(SDL_Renderer&);
+    virtual void update();
+    void score();
     virtual void draw();
     virtual void move();
     virtual void moveBackward();
@@ -28,6 +30,8 @@ public:
     SDL_Renderer* renderer;
     
     int playerX, playerY;
+    
+    int scoreValue = 0;
     
     DIRECTION curDirection = UP;
     DIRECTION nextDirection = UP;

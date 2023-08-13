@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C85014BB2A86B580000AC0AF /* characters.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C85014B92A86B580000AC0AF /* characters.cpp */; };
+		C85014BE2A870650000AC0AF /* displayText.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C85014BC2A870650000AC0AF /* displayText.cpp */; };
 		C89D2FCA2A86A2BD00EAA345 /* PacmanGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C89D2FC82A86A2BD00EAA345 /* PacmanGame.cpp */; };
 		C89D2FCD2A86A58A00EAA345 /* map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C89D2FCB2A86A58A00EAA345 /* map.cpp */; };
 		C8C065542A85A15B00EB7DDF /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C8C065532A85A15B00EB7DDF /* main.cpp */; };
@@ -32,6 +33,10 @@
 /* Begin PBXFileReference section */
 		C85014B92A86B580000AC0AF /* characters.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = characters.cpp; sourceTree = "<group>"; };
 		C85014BA2A86B580000AC0AF /* characters.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = characters.hpp; sourceTree = "<group>"; };
+		C85014BC2A870650000AC0AF /* displayText.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = displayText.cpp; sourceTree = "<group>"; };
+		C85014BD2A870650000AC0AF /* displayText.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = displayText.hpp; sourceTree = "<group>"; };
+		C85014BF2A87106D000AC0AF /* freedom.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = freedom.ttf; path = "/Users/colinmaloney/Downloads/freedom-font/freedom.ttf"; sourceTree = "<absolute>"; };
+		C869BDAC2A871A530072DF9C /* open-sans */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "open-sans"; path = "/Users/colinmaloney/Downloads/open-sans"; sourceTree = "<absolute>"; };
 		C89D2FC82A86A2BD00EAA345 /* PacmanGame.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PacmanGame.cpp; sourceTree = "<group>"; };
 		C89D2FC92A86A2BD00EAA345 /* PacmanGame.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = PacmanGame.hpp; sourceTree = "<group>"; };
 		C89D2FCB2A86A58A00EAA345 /* map.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = map.cpp; sourceTree = "<group>"; };
@@ -62,6 +67,8 @@
 		C8C065472A85A15B00EB7DDF = {
 			isa = PBXGroup;
 			children = (
+				C869BDAC2A871A530072DF9C /* open-sans */,
+				C85014BF2A87106D000AC0AF /* freedom.ttf */,
 				C8C065522A85A15B00EB7DDF /* GameAug10-23 */,
 				C8C065512A85A15B00EB7DDF /* Products */,
 				C8C0655A2A85A17500EB7DDF /* Frameworks */,
@@ -88,9 +95,12 @@
 				C89D2FCC2A86A58A00EAA345 /* map.hpp */,
 				C85014B92A86B580000AC0AF /* characters.cpp */,
 				C85014BA2A86B580000AC0AF /* characters.hpp */,
+				C85014BC2A870650000AC0AF /* displayText.cpp */,
+				C85014BD2A870650000AC0AF /* displayText.hpp */,
 			);
-			path = "GameAug10-23";
-			sourceTree = "<group>";
+			name = "GameAug10-23";
+			path = "/Users/colinmaloney/Documents/Code/XCodeProjects/GameAug10-23/GameAug10-23";
+			sourceTree = "<absolute>";
 		};
 		C8C0655A2A85A17500EB7DDF /* Frameworks */ = {
 			isa = PBXGroup;
@@ -160,6 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8C065542A85A15B00EB7DDF /* main.cpp in Sources */,
+				C85014BE2A870650000AC0AF /* displayText.cpp in Sources */,
 				C89D2FCA2A86A2BD00EAA345 /* PacmanGame.cpp in Sources */,
 				C85014BB2A86B580000AC0AF /* characters.cpp in Sources */,
 				C89D2FCD2A86A58A00EAA345 /* map.cpp in Sources */,

@@ -8,7 +8,7 @@
 #ifndef engine_hpp
 #define engine_hpp
 #include <SDL2/SDL.h>
-
+#include <SDL2_ttf/SDL_ttf.h>
 
 
 class Engine{
@@ -32,6 +32,8 @@ public:
     
     SDL_Renderer* renderer;
     SDL_Window* window;
+    
+    TTF_Font* font;
     
 };
 #endif /* engine_hpp */

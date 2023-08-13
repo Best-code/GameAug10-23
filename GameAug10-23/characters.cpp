@@ -20,7 +20,7 @@ void Character::init(SDL_Renderer& renderer)
 
 void Character::draw(){
     
-    SDL_SetRenderDrawColor(this->renderer, 255, 255, 0, SDL_ALPHA_OPAQUE);
+    SDL_SetRenderDrawColor(this->renderer, 255, 0, 0, SDL_ALPHA_OPAQUE);
     SDL_Rect player = {playerX, playerY, BLOCK_SIZE, BLOCK_SIZE};
     SDL_RenderFillRect(this->renderer, &player);
     
@@ -133,5 +133,16 @@ void Character::makeChange(){
 void Character::changeDirection(DIRECTION dir)
 {
     nextDirection = dir;
-    std::cout << "NEXT DIR " << dir << std::endl;
+}
+
+void Character::update()
+{
+    makeChange();
+    move();
+    score();
+}
+
+void Character::score()
+{
+    scoreValue += 1;
 }

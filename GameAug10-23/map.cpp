@@ -20,9 +20,9 @@ void Map::draw(){
         {
             if(pacmanMap[y][x] == 1)
             {
-                SDL_SetRenderDrawColor(this->renderer, 200, 200, 200, SDL_ALPHA_OPAQUE);
+                SDL_SetRenderDrawColor(this->renderer, 255, 255, 255, SDL_ALPHA_OPAQUE);
             } else{
-                SDL_SetRenderDrawColor(this->renderer, 50, 50, 50, SDL_ALPHA_OPAQUE);
+                SDL_SetRenderDrawColor(this->renderer, 50, 190, 50, SDL_ALPHA_OPAQUE);
             }
             SDL_Rect blip = {x*BLOCK_SIZE, y*BLOCK_SIZE, BLOCK_SIZE, BLOCK_SIZE};
             SDL_RenderFillRect(this->renderer, &blip);

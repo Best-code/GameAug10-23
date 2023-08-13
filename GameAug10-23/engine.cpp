@@ -8,6 +8,7 @@
 
 #include <iostream>
 #include <SDL2/SDL.h>
+#include <SDL2_ttf/SDL_ttf.h>
 #include "engine.hpp"
 
 using namespace std;
@@ -18,11 +19,23 @@ Engine::Engine(){
         std::cout << "SDL_Init Error: " << SDL_GetError() << std::endl;
         running = false;
     }
+    
+    if(TTF_Init() != 0) {
+        std::cout << "TTF_INIT Error: " << TTF_GetError() << std::endl;
+        running = false;
+    }
+    
+    font = TTF_OpenFont("/Users/colinmaloney/Downloads/open-sans/OpenSans-Regular.ttf", 100);
+    if(font == NULL)
+    {
+        std::cout << std::endl << "FONT DIDN'T LOAD" << std::endl << TTF_GetError() << std::endl;
+        running = false;
+    }
 }
 
 Engine::~Engine(){
     SDL_Quit();
-//    TTF_Quit();
+    TTF_Quit();
 }
 
 bool Engine::init(){
@@ -57,6 +70,7 @@ void Engine::handleEvent(SDL_Event& event){
 void Engine::clear(){
     SDL_DestroyRenderer(renderer);
     SDL_DestroyWindow(window);
+    TTF_CloseFont(font);
 }
 
 void Engine::update(){}
